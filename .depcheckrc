@@ -1,0 +1,45 @@
+ignores: [
+  # игнорируем babel-плагины
+  "@babel/*",
+  "babel-plugin-*",
+
+  # игнорируем nestjs-плагины
+  "@nestjs/*",
+
+  # TS parser
+  "@typescript-eslint/*",
+
+  # игнорируем webpack-лоадеры
+  "*-loader",
+
+  # игнорируем eslint-утилиты
+  "eslint*",
+  "babel-eslint",
+  "prettier",
+
+  # игнорируем webpack-утилиты
+  "webpack-*",
+  "webpack",
+
+  # игнорируем типы для typescript
+  "@types/*",
+
+  # игнорируем depcheck
+  "depcheck",
+
+  # игнорируем path (используется в утилитах)
+  "path",
+
+  # Тайпскрипт
+  "typescript",
+  "ts*",
+
+  # дебаг
+  "source-map-support",
+]
+
+specials: [
+  "webpack",
+  "eslint",
+  "babel"
+]
