@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: cloud-message-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: cloud-message-message
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+      - ./postgres:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    networks:
+      - cloud-message
+
+volumes:
+  postgresql-data:
+
+networks:
+  cloud-message:
+    name: cloud-message-network
+    driver: bridge
